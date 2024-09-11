@@ -1,11 +1,10 @@
-const router =  require('express').Router();
+const router = require('express').Router();
 
 router.get('/', (req, res) => {
-    res.send('Hello World!')
-})
-
-router.get('/login', (req, res) => {
-    res.send('inicio de sesion')
-})
+    res.render('../views/login');
+});
+router.get('/register', (req, res) => {
+    res.render('../views/register');
+});
 
 module.exports = router;
